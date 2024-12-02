@@ -23,12 +23,12 @@ pipeline {
     } 
     stage('Docker Image') {
       steps {
-        dir ('${env.WORKSPACE}') {
+//        dir ('${env.WORKSPACE}') {
           sh """
           docker build -t bangtaejin/spring-petclinic:$BUILD_NUMBER .
           docker tag bangtaejin/spring-petclinic:$BUILD_NUMBER bangtaejin/spring-petclinic:latest
           """
-          }
+//        }
         }    
       }
     }
