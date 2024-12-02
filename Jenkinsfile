@@ -6,7 +6,10 @@ pipeline {
     maven 'M3'
 
   }
-
+  enviroment {
+    DOCKERHUB_CREDENTIALS = credentials('dockerCredentials')
+  }
+  
   stages {
 
     stage('Git Clone') {
@@ -31,6 +34,12 @@ pipeline {
 //        }
         }    
       }
+
+      stage ('Docker Image Push') {
+        sh """
+        echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
+        docker push bangtaejin/spring-petclinic:latest
+        """
     }
 
             
