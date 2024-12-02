@@ -25,8 +25,8 @@ pipeline {
       steps {
         dir ('${env.WORKSPACE}') {
           sh """
-          docker build -t bangtaejin/spring-petclinic:$BULID_NUMBER .
-          docker tag bangtaejin/spring-petclinic:$BULID_NUMBER bangtaejin/spring-petclinic:latest
+          docker build -t bangtaejin/spring-petclinic:$BUILD_NUMBER .
+          docker tag bangtaejin/spring-petclinic:$BUILD_NUMBER bangtaejin/spring-petclinic:latest
           """
           }
         }    
