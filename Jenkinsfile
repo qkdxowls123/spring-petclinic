@@ -6,7 +6,7 @@ pipeline {
     maven 'M3'
 
   }
-  enviroment {
+  environment {
     DOCKERHUB_CREDENTIALS = credentials('dockerCredentials')
   }
   
