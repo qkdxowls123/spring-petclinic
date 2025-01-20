@@ -57,7 +57,8 @@ pipeline {
         docker rmi bangtaejin/spring-petclinic:$BUILD_NUMBER
         docker rmi bangtaejin/spring-petclinic:latest
         """
-    
+      }
+    }
 
 
     
