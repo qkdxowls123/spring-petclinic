@@ -51,7 +51,7 @@ pipeline {
       }
     }
     //docker image 삭제
-    steps('Remove Docker Image') {
+    stage('Remove Docker Image') {
       steps {
         sh """
         docker rmi bangtaejin/spring-petclinic:$BUILD_NUMBER
