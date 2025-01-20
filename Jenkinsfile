@@ -14,7 +14,7 @@ pipeline {
   }
   
   stages {
-    stage(Git Clone') {
+    stage('Git Clone') {
           steps {
             echo 'Git Clone'
             git url: 'https://github.com/qkdxowls123/spring-petclinic.git'
